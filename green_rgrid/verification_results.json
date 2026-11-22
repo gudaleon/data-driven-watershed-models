@@ -1,0 +1,72 @@
+{
+ "hand_single_tn": {
+  "expected": 20.352482794085216,
+  "got": 20.352482794085212,
+  "abs_diff": 3.552713678800501e-15
+ },
+ "hand_branch_tp": {
+  "expected": {
+   "1": 3.465758744629965,
+   "2": 3.7254669737804122,
+   "3": 10.565889173658151
+  },
+  "got": {
+   "1": 3.4657587446299645,
+   "2": 3.7254669737804122,
+   "3": 10.565889173658153
+  },
+  "max_abs_diff": 1.7763568394002505e-15
+ },
+ "input_equivalence_lay_TN": {
+  "n_catch_csv": 189,
+  "n_catch_rda": 189,
+  "to_catch_mismatch": 0,
+  "max_abs_LakeFrRet_diff": 0.00598711154222531,
+  "max_abs_NrmLengthKm_diff": 0.990359,
+  "max_abs_Shreve_diff": 66.0,
+  "max_abs_Atm_diff": 0.0,
+  "max_abs_Min_diff": 0.0,
+  "max_abs_Man_diff": 0.0,
+  "max_abs_Fix_diff": 0.0,
+  "max_abs_Soil_diff": 0.0,
+  "max_abs_Sd_diff": 0.0,
+  "max_abs_Ps_diff": 0.0,
+  "max_abs_ForestFraction_diff": 4.977885187384956e-10,
+  "max_abs_InvNrmRain_diff": 2.409825811122701e-11,
+  "n_annual_rows_csv": 5481,
+  "n_annual_rows_matched": 5481,
+  "interpretation": "Annual source columns and the topology match the package data exactly (InvNrmRain/ForestFraction to float precision). The catchment scalars do not: the correlation between Length.csv and the built-in NrmLengthKm is -0.04, so the GREENeR_data length file is not the source of the built-in column at all; the built-in Shreve column holds classic Shreve magnitudes rather than the topological levels that read_NSdata's shreve() generates; and the built-in LakeFrRet values differ from the Kronvang formula applied to the CSV lake properties by up to 0.006. read_NSdata applied to these CSVs - in R or in this port - cannot reproduce those three columns; the difference is data provenance inside the GREENeR repositories, not a port discrepancy."
+ },
+ "shares_identity": {
+  "max_abs_diff": 0.0,
+  "max_rel_diff": 0.0,
+  "n_rows": 1323
+ },
+ "shares_vs_launch": {
+  "max_abs_diff": 9.094947017729282e-13
+ },
+ "lay_obs_agreement": {
+  "n_obs": 22,
+  "pearson_r": 0.9895128641667116,
+  "rmse": 656.4610662788607,
+  "mean_bias": -427.90722887909766,
+  "note": "Parameters are the vignette doc example, not calibrated; agreement is a plausibility check, not a fit claim."
+ },
+ "lay_outlet_loads": {
+  "outlet_HydroID": 368447,
+  "loads_by_year": {
+   "2003": 2417.656716755337,
+   "2004": 1929.2958792239265,
+   "2005": 1161.2800006036082,
+   "2006": 3075.568647011588,
+   "2007": 2377.627963727682,
+   "2008": 3206.9058040048726,
+   "2009": 2410.988891632211
+  }
+ },
+ "shares_identity_TP": {
+  "max_abs_diff": 0.0,
+  "n_rows": 1323
+ },
+ "balance_rows": 1323
+}

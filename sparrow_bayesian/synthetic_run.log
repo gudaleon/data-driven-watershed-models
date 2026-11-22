@@ -1,0 +1,23 @@
+synthetic basin: outlet 940051310, 191 reaches, 7 real load stations
+mirror vs classical port: max relative difference 3.67e-16
+fast MH simulator vs mirror: max relative difference 2.52e-16
+synthetic observations: 29 sites
+{
+  "n_covered": 10,
+  "n_params": 11,
+  "stan_divergences": 0,
+  "ks_sd_stan": 0.0508650456656645,
+  "ks_sd_metropolis": 0.04261550799121416,
+  "ks_sd_ratio_stan_over_metropolis": 1.1935806485317764
+}
+  alpha_fert  true       0.35  post mean     0.2209  sd   0.04159  90% CI [0.1542, 0.2906]  covered=False
+  alpha_man   true       0.25  post mean     0.3672  sd   0.08914  90% CI [0.2291, 0.5195]  covered=True
+  rate_urban  true        280  post mean      357.4  sd     181.4  90% CI [140.4, 702.8]  covered=True
+  rate_bg     true         22  post mean      28.83  sd     12.91  90% CI [12.15, 53.77]  covered=True
+  rate_dep    true        480  post mean      507.7  sd     131.6  90% CI [320, 741.7]  covered=True
+  beta_runoff true       0.25  post mean     0.3119  sd   0.06078  90% CI [0.2125, 0.4115]  covered=True
+  beta_perm   true       -0.2  post mean    -0.1212  sd    0.1149  90% CI [-0.3097, 0.06931]  covered=True
+  beta_tile   true       0.15  post mean     0.1772  sd   0.07642  90% CI [0.05737, 0.2726]  covered=True
+  ks          true       0.18  post mean     0.1242  sd   0.05087  90% CI [0.05504, 0.2181]  covered=True
+  beta_res    true       0.45  post mean      0.837  sd    0.3696  90% CI [0.4025, 1.546]  covered=True
+  sigma       true       0.15  post mean     0.1392  sd   0.02922  90% CI [0.09607, 0.19]  covered=True

@@ -1,0 +1,42 @@
+constant,form,value,role,source_file
+a,DIP,0.85,"export function a,b; FEpnt c (=1, dummy per constants.cfg header); FEws multiplier e; diffuse export coefficient EC (kg km-2 yr-1)",constants.cfg [CAL.DIP]
+b,DIP,2.0,"export function a,b; FEpnt c (=1, dummy per constants.cfg header); FEws multiplier e; diffuse export coefficient EC (kg km-2 yr-1)",constants.cfg [CAL.DIP]
+c,DIP,1.0,"export function a,b; FEpnt c (=1, dummy per constants.cfg header); FEws multiplier e; diffuse export coefficient EC (kg km-2 yr-1)",constants.cfg [CAL.DIP]
+e,DIP,0.29,"export function a,b; FEpnt c (=1, dummy per constants.cfg header); FEws multiplier e; diffuse export coefficient EC (kg km-2 yr-1)",constants.cfg [CAL.DIP]
+EC,DIP,26.0,"export function a,b; FEpnt c (=1, dummy per constants.cfg header); FEws multiplier e; diffuse export coefficient EC (kg km-2 yr-1)",constants.cfg [CAL.DIP]
+a,DOP,0.95,export function exponent a (f=Rnat^a); FEpnt c; FEws multiplier e; EC (kg km-2 yr-1),constants.cfg [CAL.DOP]
+c,DOP,0.01,export function exponent a (f=Rnat^a); FEpnt c; FEws multiplier e; EC (kg km-2 yr-1),constants.cfg [CAL.DOP]
+e,DOP,0.01,export function exponent a (f=Rnat^a); FEpnt c; FEws multiplier e; EC (kg km-2 yr-1),constants.cfg [CAL.DOP]
+EC,DOP,15.0,export function exponent a (f=Rnat^a); FEpnt c; FEws multiplier e; EC (kg km-2 yr-1),constants.cfg [CAL.DOP]
+R_MIN,DIP/DOP/PP,0.003,minimum natural runoff (m yr-1); below it FEws=0 and PP zeroed (arid-basin rule),globalnews.py (above model_dissolved)
+D_DIP cap,DIP,0.85,maximum reservoir retention fraction applied to D_DIP input,globalnews.py Calc_FEriv
+Yld_TSS_pred_MAX,PP,5000.0,cap on pre-dam TSS yield (ton km-2 yr-1),globalnews.py (above model_particulate)
+litho_chem_class_1,PP,0.0,Amiotte-Suchet et al. 2003 lithology chemical-weathering coefficient in TSS regression (class 8 also forces TSS=0: ice/no overlay),globalnews.py Calc_Yld_TSS_pred
+litho_chem_class_2,PP,1.0379,Amiotte-Suchet et al. 2003 lithology chemical-weathering coefficient in TSS regression (class 8 also forces TSS=0: ice/no overlay),globalnews.py Calc_Yld_TSS_pred
+litho_chem_class_3,PP,0.9037,Amiotte-Suchet et al. 2003 lithology chemical-weathering coefficient in TSS regression (class 8 also forces TSS=0: ice/no overlay),globalnews.py Calc_Yld_TSS_pred
+litho_chem_class_4,PP,0.3125,Amiotte-Suchet et al. 2003 lithology chemical-weathering coefficient in TSS regression (class 8 also forces TSS=0: ice/no overlay),globalnews.py Calc_Yld_TSS_pred
+litho_chem_class_5,PP,0.0,Amiotte-Suchet et al. 2003 lithology chemical-weathering coefficient in TSS regression (class 8 also forces TSS=0: ice/no overlay),globalnews.py Calc_Yld_TSS_pred
+litho_chem_class_6,PP,-2.0678,Amiotte-Suchet et al. 2003 lithology chemical-weathering coefficient in TSS regression (class 8 also forces TSS=0: ice/no overlay),globalnews.py Calc_Yld_TSS_pred
+litho_chem_class_7,PP,0.6694,Amiotte-Suchet et al. 2003 lithology chemical-weathering coefficient in TSS regression (class 8 also forces TSS=0: ice/no overlay),globalnews.py Calc_Yld_TSS_pred
+litho_chem_class_8,PP,0.0,Amiotte-Suchet et al. 2003 lithology chemical-weathering coefficient in TSS regression (class 8 also forces TSS=0: ice/no overlay),globalnews.py Calc_Yld_TSS_pred
+coef_marggrass,PP,0.0301,Beusen et al. 2005 TSS-yield regression (log-linear),globalnews.py Calc_Yld_TSS_pred
+coef_wetlndrice,PP,0.1234,Beusen et al. 2005 TSS-yield regression (log-linear),globalnews.py Calc_Yld_TSS_pred
+coef_frnrprecp,PP,0.2933,Beusen et al. 2005 TSS-yield regression (log-linear),globalnews.py Calc_Yld_TSS_pred
+coef_frnrslope,PP,0.1027,Beusen et al. 2005 TSS-yield regression (log-linear),globalnews.py Calc_Yld_TSS_pred
+intercept,PP,0.5522,Beusen et al. 2005 TSS-yield regression (log-linear),globalnews.py Calc_Yld_TSS_pred
+trunc_marggrass_min,PP,0.0,input truncation range applied before TSS regression,globalnews.py Calc_Yld_TSS_pred
+trunc_marggrass_max,PP,84.6865,input truncation range applied before TSS regression,globalnews.py Calc_Yld_TSS_pred
+trunc_wetlndrice_min,PP,0.0,input truncation range applied before TSS regression,globalnews.py Calc_Yld_TSS_pred
+trunc_wetlndrice_max,PP,24.7206,input truncation range applied before TSS regression,globalnews.py Calc_Yld_TSS_pred
+trunc_frnrprecp_min,PP,0.854985,input truncation range applied before TSS regression,globalnews.py Calc_Yld_TSS_pred
+trunc_frnrprecp_max,PP,11.1682,input truncation range applied before TSS regression,globalnews.py Calc_Yld_TSS_pred
+trunc_frnrslope_min,PP,1.1301,input truncation range applied before TSS regression,globalnews.py Calc_Yld_TSS_pred
+trunc_frnrslope_max,PP,38.4531,input truncation range applied before TSS regression,globalnews.py Calc_Yld_TSS_pred
+poc_poly_cubic,PP,-0.16,"%POC of TSS, Ludwig et al. polynomial in log10(TSS concentration)",globalnews.py model_particulate
+poc_poly_quad,PP,2.83,"%POC of TSS, Ludwig et al. polynomial in log10(TSS concentration)",globalnews.py model_particulate
+poc_poly_lin,PP,-13.6,"%POC of TSS, Ludwig et al. polynomial in log10(TSS concentration)",globalnews.py model_particulate
+poc_poly_const,PP,20.3,"%POC of TSS, Ludwig et al. polynomial in log10(TSS concentration)",globalnews.py model_particulate
+pp_eq_intercept,PP,-3.09614,"PP load equation (eq. 4, Mayorga et al. 2010): Ld_PP_pred = exp(intercept + slope*ln(Ld_POC_pred))",globalnews.py model_particulate
+pp_eq_slope,PP,1.001769,"PP load equation (eq. 4, Mayorga et al. 2010): Ld_PP_pred = exp(intercept + slope*ln(Ld_POC_pred))",globalnews.py model_particulate
+FEpnt_DIP (=c),DIP,1.0,"point-source export fraction: sewage P passes with NO removal applied (contrast N, where hwfrem is applied; basin c0TPfrem column exists in the hydro table but is not wired to any P variable in vars.cfg)",constants.cfg [CAL.DIP] + vars.cfg [IN.VARS]
+FEpnt_DOP (=c),DOP,0.01,point-source export fraction for DOP,constants.cfg [CAL.DOP]

@@ -1,0 +1,34 @@
+variable,phosphorus_submodel_use,input_table,column,units,units_source
+BasinID,identifier (all sub-models),STN30v6ngNEWS.csv,BASINID,dimensionless ID (STN-30 v6 basin number),vars.cfg [IN.VARS]; manual: basins table determines the run's basin set
+A,all sub-models (yield<->load conversion),STN30v6ngNEWS.csv,area,km2,vars.cfg; manual gis2tbls section (area in km2)
+agric,dissolved DIP/DOP (export-coefficient split ag/natural),c00_diffsrc_landuse_ng.csv,c0agrpct,% of basin area,vars.cfg comment 'LAND USE AS PERCENTS'
+wetlndrice,PP via TSS regression,c00_diffsrc_landuse_ng.csv,c0wrpct,% of basin area,vars.cfg
+marggrass,PP via TSS regression,c00_diffsrc_landuse_ng.csv,c0mrgrpct,% of basin area,vars.cfg
+WSdif_fe_P,dissolved DIP/DOP explicit diffuse (fertilizer P),c00_diffsrc_landuse_ng.csv,c0TPfe,kg P km-2 yr-1 (basin-area yield),code/port convention; manual defers units to Mayorga et al. 2010 Suppl. Table A3 (not in repo)
+WSdif_ma_P,dissolved DIP/DOP explicit diffuse (manure P) - THE livestock-chain entry point,c00_diffsrc_landuse_ng.csv,c0TPma,kg P km-2 yr-1 (basin-area yield),code/port convention; manual defers to Suppl. Table A3
+WSdif_ex_P,"dissolved DIP/DOP explicit diffuse (crop P export/removal, subtracted)",c00_diffsrc_landuse_ng.csv,c0TPex,kg P km-2 yr-1 (basin-area yield),code/port convention; manual defers to Suppl. Table A3
+Rnat,"dissolved (export function) + PP (arid zeroing, TSS concentration)",c00_hydro_pntsrc_other_ng.csv,c0R,mm yr-1 natural runoff,vars.cfg [IN.VARS] hydrology; code divides by 1000 to m yr-1
+frnrprecp,PP via TSS regression (Fournier precipitation index),c00_hydro_pntsrc_other_ng.csv,c0frnrprecp,dimensionless Fournier-type index,vars.cfg; truncation range in globalnews.py Calc_Yld_TSS_pred
+RSpntExc_P,dissolved DIP/DOP point source (human excreta P in sewage),c00_hydro_pntsrc_other_ng.csv,c0TPsewhum,kg P km-2 yr-1 (basin-area yield),code/port convention; manual defers to Suppl. Table A3
+RSpntDet_P,dissolved DIP/DOP point source (detergent P in sewage),c00_hydro_pntsrc_other_ng.csv,c0TPsewdet,kg P km-2 yr-1 (basin-area yield),code/port convention; manual defers to Suppl. Table A3
+FQrem,dissolved DIP/DOP river retention (water consumption fraction),c00_disch_fqrem_reservret_ng.csv,c0FQremSclGEMS,fraction 0-1 of natural discharge removed,vars.cfg; Calc_FEriv in globalnews.py
+D_DIP,dissolved DIP river/reservoir retention,c00_disch_fqrem_reservret_ng.csv,c0Ddip0to1,fraction 0-1,vars.cfg; capped at 0.85 in Calc_FEriv
+D_TSS,PP (post-dam TSS and PP retention),c00_disch_fqrem_reservret_ng.csv,c0Dsed0to1,fraction 0-1,vars.cfg; model_particulate in globalnews.py
+frnrslope,PP via TSS regression (Fournier slope index),LithologySlope_ng.csv,FournierSlope,dimensionless Fournier-type index,vars.cfg; truncation range in Calc_Yld_TSS_pred
+LiClass,"PP via TSS regression (dominant lithology class, Amiotte-Suchet)",LithologySlope_ng.csv,LithClass,categorical class 1-8,vars.cfg; coefficient map in Calc_Yld_TSS_pred
+KoppenGrpAperc,not consumed by DIP/DOP/PP (used by PN in full runs),STN30v6ngNEWS.csv,KoppenGrpA_prc,% of basin area,vars.cfg
+W_pct,not consumed by P forms (DOC wetland term),c00_hydro_pntsrc_other_ng.csv,Wpct,% of basin area,vars.cfg
+WSdif_fe_N,N forms only (livestock-chain analogue for N: fertilizer N),c00_diffsrc_landuse_ng.csv,c0TNfe,kg N km-2 yr-1,vars.cfg
+WSdif_ma_N,N forms only (manure N; livestock chain N entry),c00_diffsrc_landuse_ng.csv,c0TNma,kg N km-2 yr-1,vars.cfg
+WSdif_ex_N,N forms only (crop N export),c00_diffsrc_landuse_ng.csv,c0TNex,kg N km-2 yr-1,vars.cfg
+WSdif_fix_nat_N,DIN only,c00_diffsrc_landuse_ng.csv,c0TNfxna,kg N km-2 yr-1,vars.cfg
+WSdif_fix_ant_N,DIN only,c00_diffsrc_landuse_ng.csv,c0TNfxag,kg N km-2 yr-1,vars.cfg
+WSdif_dep_ant_N,DIN only,c00_diffsrc_landuse_ng.csv,c0TNdpag,kg N km-2 yr-1,vars.cfg
+WSdif_dep_nat_N,DIN only,c00_hydro_pntsrc_other_ng.csv,c0TNdpna,kg N km-2 yr-1,vars.cfg
+RSpntExc_N,N forms only (sewage N),c00_hydro_pntsrc_other_ng.csv,c0TNsewhum,kg N km-2 yr-1,vars.cfg
+hwfrem_N_aspct,DIN/DON point-source removal (applied to N only; NO P analogue is applied),c00_hydro_pntsrc_other_ng.csv,c0TNfrem,"% (per vars.cfg comment: actually %, not fraction)",vars.cfg comment on c0TNfrem
+D_DIN,DIN only,c00_disch_fqrem_reservret_ng.csv,c0Ddin0to1,fraction 0-1,vars.cfg
+gslope,DSi only,DSi_model_inputs.csv,gaez_slope,% slope (GAEZ),vars.cfg
+bulkdens,DSi only,DSi_model_inputs.csv,bulkdens,g cm-3,vars.cfg
+frvolclith,DSi only,DSi_model_inputs.csv,fr_litho3,fraction of volcanic lithology,vars.cfg
+precip,DSi only,DSi_model_inputs.csv,precipitation,documented in Beusen et al. 2009 per vars.cfg,vars.cfg

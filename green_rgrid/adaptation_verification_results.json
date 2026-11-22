@@ -1,0 +1,80 @@
+{
+ "gate1a_dem_topology": {
+  "to_catch": {
+   "0": 2,
+   "1": 2,
+   "2": -1
+  },
+  "nrm_length": {
+   "0": 0.7071067811865475,
+   "1": 1.0,
+   "2": 0.7071067811865475
+  },
+  "passed": true
+ },
+ "gate1b_codes_topology": {
+  "to_catch": {
+   "0": 4,
+   "1": 4,
+   "2": 4,
+   "3": 4,
+   "4": 7,
+   "5": 4,
+   "6": 7,
+   "7": -1,
+   "8": 7
+  },
+  "passed": true
+ },
+ "gate2a_degeneracy_tp": {
+  "max_abs_diff": 0.0,
+  "passed": true
+ },
+ "gate2b_degeneracy_tn": {
+  "max_abs_diff": 1.7763568394002505e-15,
+  "passed": true
+ },
+ "gate3_soil_factor": {
+  "tn_max_abs_diff": 0.0,
+  "tp_max_abs_diff": 0.0,
+  "passed": true
+ },
+ "gate3_river_factor": {
+  "expected": 0.17141792959881566,
+  "got": 0.17141792959881566,
+  "abs_diff": 0.0,
+  "passed": true
+ },
+ "gate3_lake_factor": {
+  "expected": 0.9394854166583803,
+  "got": 0.9394854166583803,
+  "abs_diff": 0.0,
+  "no_lake_value": 0.0,
+  "passed": true
+ },
+ "gate3_full_eq1": {
+  "expected": 0.7384104548449663,
+  "got": 0.7384104548449663,
+  "abs_diff": 0.0,
+  "passed": true
+ },
+ "gate3_upstream_placement": {
+  "expected_down": 65.18191617571635,
+  "got_down": 65.18191617571635,
+  "abs_diff": 0.0,
+  "passed": true
+ },
+ "gate4_shares_identity": {
+  "max_abs_diff_shares_sum": 0.0,
+  "max_abs_diff_vs_launch": 7.105427357601002e-15,
+  "n_rows": 12,
+  "passed": true
+ },
+ "gate5_catchment_path": {
+  "expected": 20.352482794085216,
+  "got": 20.352482794085212,
+  "abs_diff": 3.552713678800501e-15,
+  "green_py_md5": "b10fc7266981d40f2032d4d6ac08b68d",
+  "passed": true
+ }
+}

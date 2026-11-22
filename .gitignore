@@ -1,0 +1,6 @@
+# Build artifacts (reproducible from source)
+__pycache__/
+*.pyc
+sparrow_bayesian/sparrow
+# Model output data — codes only in this repository; outputs stay in the project workspace
+sparrow_bayesian/synthetic/draws_*.csv

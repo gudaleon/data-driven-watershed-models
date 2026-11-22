@@ -1,0 +1,56 @@
+{
+  "gate1_canada_census_v2": {
+    "max_year_residual": 2.1405099914773018e-13,
+    "cumulative_residual": 5.684341886080802e-14,
+    "pass_": true
+  },
+  "drive_canada_census_v2": {
+    "surplus_range": [
+      3.2301243981257617,
+      10.38642979725125
+    ],
+    "final_load": 0.7335434257898574,
+    "final_source_store": 676.3377432936741
+  },
+  "gate1_ontario_long_v3": {
+    "max_year_residual": 4.0323300254385686e-13,
+    "cumulative_residual": 4.547473508864641e-13,
+    "pass_": true
+  },
+  "drive_ontario_long_v3": {
+    "surplus_range": [
+      5.8328450769226,
+      21.24451363878579
+    ],
+    "final_load": 1.9252027466637998,
+    "final_source_store": 1295.1944456652568
+  },
+  "gate1_gate2_history": {
+    "max_year_residual": 2.8421709430404007e-13,
+    "cumulative_residual": 1.1368683772161603e-13,
+    "pass_": true
+  },
+  "gate2": {
+    "cum_surplus": 976.5,
+    "cum_export": 109.5139564014621,
+    "retained_share": 0.8878505310788919,
+    "paper_value": "~0.96 retained since 1900 (VM21 abstract/key points: >95%)",
+    "export_peak_year": 2018,
+    "surplus_peak_year": 1978,
+    "crosscorr_lag_years": 30,
+    "pass_": true
+  },
+  "gate2_triangular_branch_retained_share": 0.9191261224766086,
+  "gate1_stationarity": {
+    "max_year_residual": 8.705924869900628e-12,
+    "cumulative_residual": 2.9340299079194665e-09,
+    "pass_": true
+  },
+  "gate3": {
+    "dynamic_store_final": 4654.8747864328025,
+    "rel_change_last_50yr": 0.007647100819218501,
+    "export_over_surplus_final_decade": 0.5101530568471682,
+    "export_plus_sinks_over_surplus": 0.9024217343252134,
+    "pass_": true
+  }
+}
